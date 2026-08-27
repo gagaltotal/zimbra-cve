@@ -1,0 +1,56 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+env3/
+.conda/
+
+# Packaging and build output
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Penetration-testing artifacts and local target data
+targets.txt
+targets.csv
+results/
+outputs/
+logs/
+*.log
+*.pcap
+
+# Runtime and temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+.DS_Store
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-generated files
+Thumbs.db
+Desktop.ini
