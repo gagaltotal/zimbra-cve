@@ -39,7 +39,7 @@ Penulis tidak bertanggung jawab atas kerusakan, kehilangan data, gangguan layana
 Disarankan menggunakan virtual environment agar dependensi proyek tidak mengubah instalasi Python sistem.
 
 ```bash
-git clone <URL-REPOSITORI>
+git clone https://github.com/gagaltotal/zimbra-cve
 cd zimbra-cve
 
 python3 -m venv .venv
@@ -59,6 +59,8 @@ Dependensi CVE-2024-45519 tercantum di [CVE-2024-45519/requirements.txt](CVE-202
 ## Penggunaan
 
 ### CVE-2022-27925
+
+![Screen Capture](https://raw.githubusercontent.com/gagaltotal/zimbra-cve/refs/heads/main/images/Screenshot%20from%202026-08-27%2022-39-26.png)
 
 Masuk ke direktori skrip, lalu jalankan pengujian terhadap satu URL:
 
@@ -88,6 +90,8 @@ Jika berhasil, skrip akan menguji webshell yang dibuat dan menampilkan lokasinya
 ### CVE-2024-45519
 
 Skrip ini menghubungi layanan SMTP target dan menjalankan listener reverse shell lokal.
+
+![Screen Capture](https://raw.githubusercontent.com/gagaltotal/zimbra-cve/refs/heads/main/images/Screenshot%20from%202026-08-27%2022-40-40.png)
 
 ```bash
 cd CVE-2024-45519
