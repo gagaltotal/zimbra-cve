@@ -198,6 +198,8 @@ Repositori ini belum menyertakan berkas lisensi. Penggunaan dan redistribusi kod
 ## Referensi resmi:
 
 - [NVD: CVE-2022-27925](https://nvd.nist.gov/vuln/detail/CVE-2022-27925)
+- [CVE-2022-37042](https://github.com/0xf4n9x/CVE-2022-37042)
 - [NVD: CVE-2024-45519](https://nvd.nist.gov/vuln/detail/CVE-2024-45519)
 - [Zimbra Security Center](https://www.zimbra.com/security/)
+- [CVE-2025-68645](https://github.com/HarisAidhin/Poc_CVE-2025-68645)
 - [CVE-2026-73570](https://github.com/gabrielunknown/cve-2026-73570)

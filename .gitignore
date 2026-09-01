@@ -49,6 +49,48 @@ logs/
 # IDE and editor settings
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# Go-specific artifacts
+*.exe
+go.sum
+
+# Test and scan results
+*_results.json
+*_results.txt
+*_scan*.json
+*_scan*.txt
+scan_report*
+vulnerability_report*
+
+# Sensitive data and credentials
+*.secret
+*.encrypted
+credentials*.txt
+api_keys*
+tokens*
+
+# Target lists and reconnaissance data
+targets.txt
+targets.csv
+domains.txt
+urls.txt
+host_list*
+ip_list*
+
+# Compiled exploit outputs and artifacts
+*.jsp
+shell*
+payload*
+exploit_output*
+
+# Environment-specific files
+.env.local
+.env.*.local
+config.local.*
+.idea/
 *.code-workspace
 
 # OS-generated files
